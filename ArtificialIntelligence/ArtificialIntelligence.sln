@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence", "ArtificialIntelligence.csproj", "{8894788D-757E-413F-B7FA-7EBEE784B549}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseTest", "..\MouseTest\MouseTest.csproj", "{0C993312-821D-424D-940B-7F632839ABAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetwork", "..\..\..\..\source\repos\NeuralNetwork\NeuralNetwork\NeuralNetwork.csproj", "{597D63C9-F8C5-482F-9066-0900478EEBC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,19 @@ Global
 		{8894788D-757E-413F-B7FA-7EBEE784B549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8894788D-757E-413F-B7FA-7EBEE784B549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8894788D-757E-413F-B7FA-7EBEE784B549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C993312-821D-424D-940B-7F632839ABAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C993312-821D-424D-940B-7F632839ABAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C993312-821D-424D-940B-7F632839ABAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C993312-821D-424D-940B-7F632839ABAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{597D63C9-F8C5-482F-9066-0900478EEBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597D63C9-F8C5-482F-9066-0900478EEBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597D63C9-F8C5-482F-9066-0900478EEBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597D63C9-F8C5-482F-9066-0900478EEBC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9BE695D-6994-4DEA-8627-6A02681B26EB}
 	EndGlobalSection
 EndGlobal

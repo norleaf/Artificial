@@ -25,16 +25,24 @@ namespace ArtificialIntelligence
             return screenShot;
         }
 
-        public Point? GetFirstPixel(Bitmap bitmap, Color color)
+        public Point? GetFirstPixel(Bitmap bitmap, Color targetcolor)
         {
-            for (var y = 0; y < bitmap.Height; y++)
+            Console.WriteLine(string.Format("bitmpap height {0}",bitmap.Height));
+            
+
+            for (var y = 0; y < bitmap.Height; y+=2)
             {
-                for (var x = 0; x < bitmap.Width; x++)
+                for (var x = 0; x < bitmap.Width; x+=2)
                 {
-                    if (bitmap.GetPixel(x, y).Equals(color))
+                    Color color = bitmap.GetPixel(x, y);
+                    if (color.R > 240)
                     {
                         return new Point(x, y);
                     }
+                    //else 
+                    //{
+                    //    Console.WriteLine(color.R);
+                    //}
                 }
             }
 
