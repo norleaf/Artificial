@@ -9,15 +9,17 @@ namespace NeuralNetwork
     public class Network
     {
 
-        public double Sigmoid(double z)
+        public List<Layer> Layers { get; set; }
+
+        public float Sigmoid(float z)
         {
             //todo: figure out if this can handle vectors or arrays...
-            return 1 / (1 + Math.Exp(-z));
+            return (float)( 1 / (1 + Math.Exp(-z)));
         }
 
-        public double FeedForward(Node node)
+        public void FeedForward(Node node)
         {
-            //todo: Figure out how to create this...
+            // Figure out how to create this...
             /*
                     def feedforward(self, a):
                     """Return the output of the network if "a" is input."""
@@ -25,7 +27,10 @@ namespace NeuralNetwork
                         a = sigmoid(np.dot(w, a)+b)
                     return a
              */
-            return 0;
+             //THink this might be it
+            var charge = node.Inputs.Sum(r => r.Charge * r.Weight) + node.Bias;
+            var sigmoidedCharge = Sigmoid(charge);
+            node.Outputs.ForEach(r => r.Charge = sigmoidedCharge);
         }
 
         public void SGD(ITrainingDataObject[] trainingData, int epochs, int batchSize, double eta, ITrainingDataObject[] testData = null)
@@ -42,13 +47,24 @@ namespace NeuralNetwork
         }
     }
 
+    
+
     public class Layer
     {
-
+        public List<Node> Nodes { get; set; }
     }
 
     public class Node
     {
+        public float Bias { get; set; }
+        public List<Neuron> Inputs { get; set; }
+        public List<Neuron> Outputs { get; set; }
+    }
+
+    public class Neuron
+    {
+        public float Weight { get; set; }
+        public float Charge { get; set; }
     }
 
     public class Image : ITrainingDataObject
