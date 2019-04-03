@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialIntelligence", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseTest", "..\MouseTest\MouseTest.csproj", "{0C993312-821D-424D-940B-7F632839ABAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetwork", "..\..\..\..\source\repos\NeuralNetwork\NeuralNetwork\NeuralNetwork.csproj", "{597D63C9-F8C5-482F-9066-0900478EEBC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetwork", "..\NeuralNetwork\NeuralNetwork.csproj", "{597D63C9-F8C5-482F-9066-0900478EEBC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
