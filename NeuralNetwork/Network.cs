@@ -11,6 +11,11 @@ namespace NeuralNetwork
 
         public List<Layer> Layers { get; set; }
 
+        public Network(int inputs, int outputs, params Layer[] layers)
+        {
+            var intputLayer = new Layer();
+        }
+
         public float Sigmoid(float z)
         {
             //todo: figure out if this can handle vectors or arrays...
