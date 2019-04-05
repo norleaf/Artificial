@@ -8,12 +8,17 @@ namespace NeuralNetwork
 {
     public class Network
     {
-
-        public List<Layer> Layers { get; set; }
+        public Random random;
+        public List<Layer> HiddenLayers { get; set; }
+        public Layer IntputLayer { get; set; }
+        public Layer OutputLayer { get; set; }
 
         public Network(int inputs, int outputs, params Layer[] layers)
         {
-            var intputLayer = new Layer(inputs);
+            IntputLayer = new Layer(inputs);
+            OutputLayer = new Layer(outputs);
+            HiddenLayers = layers.ToList();
+            random = new Random();
         }
 
         public float Sigmoid(float z)
@@ -38,6 +43,11 @@ namespace NeuralNetwork
             node.Outputs.ForEach(r => r.Charge = sigmoidedCharge);
         }
 
+        public void CombineLayers()
+        {
+
+        }
+
         public void SGD(ITrainingDataObject[] trainingData, int epochs, int batchSize, double eta, ITrainingDataObject[] testData = null)
         {
                         /*todo: Train the neural network using mini-batch stochastic
@@ -57,13 +67,14 @@ namespace NeuralNetwork
     public class Layer
     {
         public List<Node> Nodes { get; set; }
-
+        public Random random;
         public Layer(int nodes)
         {
             Nodes = new List<Node>();
+            random = new Random();
             for (int i = 0; i < nodes; i++)
             {
-                Nodes.Add(new )
+                Nodes.Add(new Node { Bias = (float)random.NextDouble() });
             }
         }
     }
